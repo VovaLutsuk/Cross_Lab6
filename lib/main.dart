@@ -15,6 +15,10 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.deepPurple,
       ),
+
+
+
+
       // Додаємо маршрути
       initialRoute: '/',  // Початковий маршрут
       routes: {

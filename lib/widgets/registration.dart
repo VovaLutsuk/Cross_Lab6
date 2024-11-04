@@ -5,7 +5,10 @@ class RegisterScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Реєстрація'),
+        title: Text(
+          'Реєстрація',
+          style: TextStyle(fontSize: 28), // Розмір шрифта для заголовка
+        ),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -15,23 +18,50 @@ class RegisterScreen extends StatelessWidget {
             TextField(
               decoration: InputDecoration(
                 labelText: 'Ім\'я користувача',
-                border: OutlineInputBorder(),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(10.0),
+                  borderSide: BorderSide(
+                    color: Colors.blue, // Колір контуру
+                    width: 2.0, // Товщина контуру
+                  ),
+                ),
+                filled: true,
+                fillColor: Colors.grey[200], // Колір фону
               ),
+              style: TextStyle(fontSize: 20), // Розмір шрифта для TextField
             ),
             SizedBox(height: 16.0),
             TextField(
               decoration: InputDecoration(
                 labelText: 'Логін',
-                border: OutlineInputBorder(),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(10.0),
+                  borderSide: BorderSide(
+                    color: Colors.blue, // Колір контуру
+                    width: 2.0, // Товщина контуру
+                  ),
+                ),
+                filled: true,
+                fillColor: Colors.grey[200], // Колір фону
               ),
+              style: TextStyle(fontSize: 20), // Розмір шрифта для TextField
             ),
             SizedBox(height: 16.0),
             TextField(
               decoration: InputDecoration(
                 labelText: 'Пароль',
-                border: OutlineInputBorder(),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(10.0),
+                  borderSide: BorderSide(
+                    color: Colors.blue, // Колір контуру
+                    width: 2.0, // Товщина контуру
+                  ),
+                ),
+                filled: true,
+                fillColor: Colors.grey[200], // Колір фону
               ),
               obscureText: true,
+              style: TextStyle(fontSize: 20), // Розмір шрифта для TextField
             ),
             SizedBox(height: 24.0),
             ElevatedButton(
@@ -40,20 +70,32 @@ class RegisterScreen extends StatelessWidget {
                   context: context,
                   builder: (BuildContext ctx) {
                     return const AlertDialog(
-                      title: Text('Message'),
-                      content: Text("Need to implement"),
+                      title: Text(
+                        'Message',
+                        style: TextStyle(fontSize: 20), // Розмір шрифта для заголовка AlertDialog
+                      ),
+                      content: Text(
+                        "Need to implement",
+                        style: TextStyle(fontSize: 18), // Розмір шрифта для контенту AlertDialog
+                      ),
                     );
                   },
                 );
               },
-              child: Text('Зареєструватися'),
+              child: Text(
+                'Зареєструватися',
+                style: TextStyle(fontSize: 22), // Розмір шрифта для кнопки
+              ),
             ),
             SizedBox(height: 8.0),
             TextButton(
               onPressed: () {
                 Navigator.pop(context);
               },
-              child: Text('Вже є акаунт? Увійти'),
+              child: Text(
+                'Вже є акаунт? Увійти',
+                style: TextStyle(fontSize: 20), // Розмір шрифта для кнопки
+              ),
             ),
           ],
         ),
